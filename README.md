@@ -1,96 +1,66 @@
-# Herbal Vitality - Dynamic Organic Herbal Products Website
+# Natural Life World
 
-A vibrant, responsive website for an organic herbal products business. The design emphasizes natural aesthetics with a bright, energetic color palette and organic shapes.
+A modern, responsive website for Natural Life World, a company specializing in herbal and natural wellness products. The site includes both a customer-facing frontend and a secure admin panel for content management.
 
-## Features
+## 🌿 Features
 
-- **Dynamic Typography and Interactive Elements** - Animated text effects and smooth UI interactions
-- **Responsive Design** - Fully responsive layout optimized for all device sizes
-- **Product Filtering** - Interactive category filtering for product display
-- **Testimonial Carousel** - Dynamic slider to showcase customer reviews
-- **Modern UI Components** - Custom components with natural textures and organic shapes
-- **Smooth Animations** - Subtle animations that enhance the user experience
+### Customer Website
+- Responsive design that works on all devices
+- Product showcase with detailed information
+- Blog section with wellness articles
+- Contact forms and location information
+- SEO optimized structure
 
-## Design Elements
+### Admin Panel
+- Secure authentication system
+- Dashboard with key metrics
+- Product management
+- Blog content management
+- Order tracking
+- SEO performance monitoring
 
-- **Color Palette** - Deep greens, bright yellows, and natural accent colors to evoke freshness and vitality
-- **Typography** - Modern typography combination with Playfair Display (headings) and Poppins (body text)
-- **Organic Shapes** - Natural leaf patterns and curved sections for organic feel
-- **Natural Textures** - Subtle patterns that reflect the brand's connection to nature
+## 🚀 Deployment
 
-## File Structure
+This website can be easily deployed on Vercel by following these steps:
 
-```
-├── index.html              # Main HTML file
-├── css/
-│   └── styles.css          # Main stylesheet
-├── js/
-│   └── main.js             # JavaScript functionality
-└── images/                 # Image assets directory
-    ├── hero-product.png    # Hero section product image
-    ├── herb-1.png          # Decorative herb images
-    ├── herb-2.png
-    ├── herb-3.png
-    ├── product-1.png       # Product images
-    ├── product-2.png
-    └── ... etc.
-```
+1. Fork or clone this repository to your GitHub account
+2. Connect your GitHub account to Vercel
+3. Create a new project in Vercel and select this repository
+4. Configure the following settings:
+   - Build Command: `none` (static site)
+   - Output Directory: `./` (root directory)
+   - Install Command: `none`
+5. Click "Deploy"
 
-## Required Images
+## 🔧 Local Development
 
-For the website to display correctly, you need to add the following image files to the `images` directory:
+To run this website locally:
 
-- SVG icons for UI elements:
-  - `leaf-icon.svg` - Logo leaf icon
-  - `organic-icon.svg`, `sustainable-icon.svg`, `potent-icon.svg`, `tested-icon.svg` - Benefit icons
-  - `leaf-pattern.svg` - Background pattern
-  - `leaf-decoration-1.svg`, `leaf-decoration-2.svg` - Newsletter decorations
-  - `star-icon.svg` - Rating star
-  - Social media icons: `facebook-icon.svg`, `instagram-icon.svg`, `twitter-icon.svg`, `pinterest-icon.svg`
-  - Payment icons: `visa-icon.svg`, `mastercard-icon.svg`, `amex-icon.svg`, `paypal-icon.svg`
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/naturallifeworld.git
 
-- Product and content images:
-  - `hero-product.png` - Main product image
-  - `herb-1.png`, `herb-2.png`, `herb-3.png` - Floating herb decoration images
-  - `product-1.png` through `product-6.png` - Product images
-  - `blog-1.jpg`, `blog-2.jpg`, `blog-3.jpg` - Blog post thumbnails
-  - `benefits-image.png` - Image for benefits section
-  - `testimonial-1.jpg`, `testimonial-2.jpg`, `testimonial-3.jpg` - Testimonial author avatars
+# Navigate to the project
+cd naturallifeworld
 
-## How to Use
-
-1. Clone or download this repository
-2. Add the required images to the `images` directory
-3. Open `index.html` in a web browser
-
-## Customization
-
-### Updating Content
-
-Edit the `index.html` file to update the website content, including:
-- Product information
-- Blog posts
-- Testimonials
-- Company information
-
-### Changing Colors
-
-To modify the color scheme, edit the CSS variables in the `:root` section of `styles.css`:
-
-```css
-:root {
-    --color-primary: #2c9d50;      /* Deep green */
-    --color-secondary: #f8c630;    /* Bright yellow */
-    --color-tertiary: #e67e22;     /* Warm orange */
-    /* ... other colors ... */
-}
+# Serve with any static file server
+# Example using npx and serve:
+npx serve
 ```
 
-## Browser Compatibility
+## 🔒 Admin Access
 
-This website is compatible with:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Android Chrome)
+The admin panel is located at `/admin/` and uses the following default credentials:
+- Email: `admin@naturallifeworld.com`
+- Password: `admin123`
+
+**Important:** Change these credentials before deploying to production.
+
+## 📝 License
+
+This project is proprietary and is licensed exclusively for use by Natural Life World.
+
+## 📞 Contact
+
+For more information or support, contact:
+- Email: support@naturallifeworld.com
