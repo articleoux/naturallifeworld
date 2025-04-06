@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Life World - Organic Herbal Products</title>
+    <meta name="description" content="Quality organic herbal products for natural wellness and vitality">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">
+                    <span class="logo-leaf"></span>
+                    <h1>Natural Life World</h1>
+                </a>
+                
+                <button class="mobile-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#" class="nav-cta">Shop Now</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-pattern"></div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Natural Remedies for <span class="highlight">Modern Life</span></h1>
+                    <h2>Your Daily Dose of <span id="dynamic-text" class="typed-text">Vitality & Wellness</span></h2>
+                    <p>Discover our premium selection of organic herbal products that nourish your body and restore balance to your life. Ethically sourced and sustainably crafted for optimal wellness.</p>
+                    <div class="hero-cta">
+                        <a href="#products" class="btn btn-primary btn-lg">Explore Products</a>
+                        <a href="#benefits" class="btn btn-outline btn-lg">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="floating-herbs">
+                        <img src="images/herb-1.png" alt="Herb" class="herb-1 floating">
+                        <img src="images/herb-2.png" alt="Herb" class="herb-2 floating">
+                        <img src="images/herb-3.png" alt="Herb" class="herb-3 floating">
+                    </div>
+                    <div class="hero-product">
+                        <img src="images/hero-product.png" alt="Featured Product">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="curved-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Products</span>
+                <h2>Premium Organic <span class="highlight">Herbal Solutions</span></h2>
+                <p>Carefully formulated with the finest organic ingredients to provide natural wellness solutions for everyday life.</p>
+            </div>
+            
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="tinctures">Tinctures</button>
+                <button class="filter-btn" data-filter="teas">Herbal Teas</button>
+                <button class="filter-btn" data-filter="supplements">Supplements</button>
+                <button class="filter-btn" data-filter="oils">Essential Oils</button>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="tinctures">
+                    <span class="card-badge">New</span>
+                    <div class="product-image">
+                        <img src="images/product-1.png" alt="Immune Support Tincture">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Tinctures</span>
+                        <h3>Immune Support Tincture</h3>
+                        <p>A powerful blend of echinacea, elderberry, and astragalus to strengthen your immune system.</p>
+                        <div class="product-details">
+                            <span class="product-price">$24.99</span>
+                            <a href="#" class="btn-add-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-category="teas">
+                    <div class="product-image">
+                        <img src="images/product-2.png" alt="Calming Tea Blend">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Herbal Teas</span>
+                        <h3>Calming Tea Blend</h3>
+                        <p>A soothing blend of chamomile, lavender, and lemon balm to promote relaxation and sleep.</p>
+                        <div class="product-details">
+                            <span class="product-price">$18.99</span>
+                            <a href="#" class="btn-add-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-category="supplements">
+                    <span class="card-badge">Bestseller</span>
+                    <div class="product-image">
+                        <img src="images/product-3.png" alt="Daily Balance Capsules">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Supplements</span>
+                        <h3>Daily Balance Capsules</h3>
+                        <p>A blend of adaptogens and herbs to support overall wellness and hormonal balance.</p>
+                        <div class="product-details">
+                            <span class="product-price">$29.99</span>
+                            <a href="#" class="btn-add-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-category="oils">
+                    <div class="product-image">
+                        <img src="images/product-4.png" alt="Vitality Essential Oil Blend">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Essential Oils</span>
+                        <h3>Vitality Essential Oil Blend</h3>
+                        <p>An energizing blend of citrus and mint oils to invigorate the senses and boost energy.</p>
+                        <div class="product-details">
+                            <span class="product-price">$22.99</span>
+                            <a href="#" class="btn-add-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card" data-category="tinctures">
+                    <div class="product-image">
+                        <img src="images/product-5.png" alt="Sleep Support Tincture">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Tinctures</span>
+                        <h3>Sleep Support Tincture</h3>
+                        <p>A gentle blend of valerian, passionflower, and California poppy for restful sleep.</p>
+                        <div class="product-details">
+                            <span class="product-price">$26.99</span>
+                            <a href="#" class="btn-add-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card" data-category="teas">
+                    <div class="product-image">
+                        <img src="images/product-6.png" alt="Digestive Wellness Tea">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Herbal Teas</span>
+                        <h3>Digestive Wellness Tea</h3>
+                        <p>A soothing blend of peppermint, ginger, and fennel to support digestive health.</p>
+                        <div class="product-details">
+                            <span class="product-price">$18.99</span>
+                            <a href="#" class="btn-add-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <a href="#" class="btn btn-primary">View All Products</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="leaf-pattern left"></div>
+        <div class="leaf-pattern right"></div>
+        
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <div class="section-header">
+                        <span class="section-tag">Why Choose Us</span>
+                        <h2>The Natural <span class="highlight">Difference</span></h2>
+                        <p>Our commitment to quality and sustainability sets us apart in the world of herbal wellness.</p>
+                    </div>
+                    
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon organic"></div>
+                            <div class="benefit-info">
+                                <h3>100% Organic Ingredients</h3>
+                                <p>All our ingredients are certified organic, ethically sourced, and free from harmful chemicals and pesticides.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon sustainable"></div>
+                            <div class="benefit-info">
+                                <h3>Sustainable Practices</h3>
+                                <p>From farm to package, we implement eco-friendly practices to minimize our environmental footprint.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon potent"></div>
+                            <div class="benefit-info">
+                                <h3>Maximum Potency</h3>
+                                <p>Our unique extraction methods preserve the full spectrum of beneficial plant compounds for optimal effectiveness.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon tested"></div>
+                            <div class="benefit-info">
+                                <h3>Third-Party Tested</h3>
+                                <p>Every product batch undergoes rigorous testing for purity, potency, and quality to ensure you get the best.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefits-image">
+                    <img src="images/benefits-image.png" alt="Our Organic Farm">
+                    <div class="image-badge">
+                        <span>Over</span>
+                        <strong>15</strong>
+                        <span>Years</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Blog</span>
+                <h2>Herbal <span class="highlight">Wisdom</span> & Insights</h2>
+                <p>Explore our collection of articles, recipes, and wellness tips to enhance your natural lifestyle.</p>
+            </div>
+            
+            <div class="blog-slider">
+                <!-- Blog Post 1 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-1.jpg" alt="Blog Post">
+                        <span class="post-category">Wellness</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span>May 12, 2023</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>5 Adaptogenic Herbs to Combat Daily Stress</h3>
+                        <p>Discover the power of adaptogenic herbs that can help your body manage stress and restore balance naturally.</p>
+                        <a href="#" class="read-more">Read Article <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-2.jpg" alt="Blog Post">
+                        <span class="post-category">Recipes</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span>April 28, 2023</span>
+                            <span>3 min read</span>
+                        </div>
+                        <h3>Immune-Boosting Herbal Tea Blends for Winter</h3>
+                        <p>Stay healthy this winter with these simple yet powerful herbal tea recipes designed to strengthen your immune system.</p>
+                        <a href="#" class="read-more">Read Article <span class="arrow">→</span></a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="images/blog-3.jpg" alt="Blog Post">
+                        <span class="post-category">Education</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span>April 15, 2023</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3>Understanding Herbal Extraction Methods</h3>
+                        <p>Learn about different extraction techniques and how they affect the potency and efficacy of herbal products.</p>
+                        <a href="#" class="read-more">Read Article <span class="arrow">→</span></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <a href="#" class="btn btn-primary">View All Articles</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="curved-divider top">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+        
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">Testimonials</span>
+                <h2>What Our Customers Are Saying</h2>
+                <p>Hear from people who have experienced the benefits of our herbal products in their daily lives.</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-nav">
+                    <button class="prev-btn" aria-label="Previous testimonial"><span></span></button>
+                    <button class="next-btn" aria-label="Next testimonial"><span></span></button>
+                </div>
+                
+                <div class="testimonials-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-item active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                            </div>
+                            <blockquote>
+                                The Immune Support Tincture has become my go-to during the winter months. I've noticed a significant difference in my overall wellness since I started using it regularly. The quality is unmatched!
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-1.jpg" alt="Sarah Johnson">
+                                <div class="author-info">
+                                    <span class="author-name">Sarah Johnson</span>
+                                    <span class="author-title">Yoga Instructor</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star half"></span>
+                            </div>
+                            <blockquote>
+                                After struggling with sleep issues for years, the Sleep Support Tincture has been a game-changer. It helps me wind down naturally without feeling groggy the next morning. I'm finally getting restful sleep!
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-2.jpg" alt="Michael Rodriguez">
+                                <div class="author-info">
+                                    <span class="author-name">Michael Rodriguez</span>
+                                    <span class="author-title">Software Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                                <span class="star"></span>
+                            </div>
+                            <blockquote>
+                                The Daily Balance Capsules have transformed my energy levels and overall wellbeing. As a busy mom of three, I need something that works efficiently, and these capsules deliver. Highly recommend!
+                            </blockquote>
+                            <div class="testimonial-author">
+                                <img src="images/testimonial-3.jpg" alt="Emma Thompson">
+                                <div class="author-info">
+                                    <span class="author-name">Emma Thompson</span>
+                                    <span class="author-title">Nutritionist</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="curved-divider bottom">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-container">
+                <div class="leaf-decoration left"></div>
+                <div class="leaf-decoration right"></div>
+                
+                <div class="newsletter-content">
+                    <h2>Join Our Herbal Community</h2>
+                    <p>Subscribe to our newsletter for seasonal wellness tips, exclusive offers, and early access to new products.</p>
+                    
+                    <form class="newsletter-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email Address" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </div>
+                        <div class="form-terms">
+                            <label>
+                                <input type="checkbox" required>
+                                I agree to receive emails and accept the <a href="#">Privacy Policy</a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-leaf"></span>
+                        <h2>Natural Life World</h2>
+                    </a>
+                    <p>Empowering your wellness journey with nature's finest herbs, ethically sourced and thoughtfully crafted for optimal health.</p>
+                    <div class="social-links">
+                        <a href="#"><span class="social-icon facebook"></span></a>
+                        <a href="#"><span class="social-icon instagram"></span></a>
+                        <a href="#"><span class="social-icon twitter"></span></a>
+                        <a href="#"><span class="social-icon pinterest"></span></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Shop</h3>
+                        <ul>
+                            <li><a href="#">All Products</a></li>
+                            <li><a href="#">Tinctures</a></li>
+                            <li><a href="#">Herbal Teas</a></li>
+                            <li><a href="#">Supplements</a></li>
+                            <li><a href="#">Essential Oils</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Sourcing</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Shipping & Returns</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Natural Life World. All rights reserved.</p>
+                <div class="payment-methods">
+                    <span class="payment visa"></span>
+                    <span class="payment mastercard"></span>
+                    <span class="payment amex"></span>
+                    <span class="payment paypal"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

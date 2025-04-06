@@ -1,0 +1,49 @@
+# Secure the admin panel with Basic Authentication
+AuthType Basic
+AuthName "Natural Life World Admin Area"
+AuthUserFile /path/to/.htpasswd
+Require valid-user
+
+# Block access to specific file types
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Prevent directory listing
+Options -Indexes
+
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Limit file uploads to 10MB
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+
+# Set security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:;"
+    Header set Referrer-Policy "same-origin"
+</IfModule>
+
+# Protect against SQL injections, XSS and other vulnerabilities
+<IfModule mod_rewrite.c>
+    RewriteCond %{QUERY_STRING} proc/self/environ [OR]
+    RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|\%3D) [OR]
+    RewriteCond %{QUERY_STRING} base64_encode.*(.*) [OR]
+    RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+    RewriteCond %{QUERY_STRING} GLOBALS(=|[|\%[0-9A-Z]{0,2}) [OR]
+    RewriteCond %{QUERY_STRING} _REQUEST(=|[|\%[0-9A-Z]{0,2})
+    RewriteRule .* index.php [F]
+</IfModule>
+
+# Custom error pages
+ErrorDocument 401 /admin/error/401.html
+ErrorDocument 403 /admin/error/403.html
+ErrorDocument 404 /admin/error/404.html
+ErrorDocument 500 /admin/error/500.html 

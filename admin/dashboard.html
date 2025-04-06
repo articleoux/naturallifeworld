@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Natural Life World</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/admin-styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="logo">
+                    <span class="logo-leaf"></span>
+                    <h1>Natural Life World</h1>
+                </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link active">
+                        <i class="fas fa-tachometer-alt nav-icon"></i>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">
+                        <i class="fas fa-leaf nav-icon"></i>
+                        <span class="nav-text">Products</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">
+                        <i class="fas fa-book nav-icon"></i>
+                        <span class="nav-text">Blog</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                        <i class="fas fa-comment-dots nav-icon"></i>
+                        <span class="nav-text">Testimonials</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="orders.html" class="nav-link">
+                        <i class="fas fa-shopping-cart nav-icon"></i>
+                        <span class="nav-text">Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="seo.html" class="nav-link">
+                        <i class="fas fa-chart-line nav-icon"></i>
+                        <span class="nav-text">SEO Metrics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i class="fas fa-cog nav-icon"></i>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="logout-link">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span class="nav-text">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">Dashboard</h1>
+                <div class="user-info">
+                    <span id="admin-name">Admin User</span>
+                    <img src="img/admin-avatar.jpg" alt="Admin" class="user-avatar">
+                </div>
+            </div>
+            
+            <!-- Stats Overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-title">Total Products</h3>
+                        <p class="stat-value">32</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-title">Blog Posts</h3>
+                        <p class="stat-value">18</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-title">Recent Orders</h3>
+                        <p class="stat-value">27</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-title">New Customers</h3>
+                        <p class="stat-value">15</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Recent Orders -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Recent Orders</h2>
+                        <a href="orders.html" class="btn btn-sm btn-primary">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-container">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ORD-2023-452</td>
+                                        <td>Sarah Johnson</td>
+                                        <td>Immune Support Tincture</td>
+                                        <td>$24.99</td>
+                                        <td><span class="badge badge-success">Completed</span></td>
+                                        <td>May 15, 2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-2023-451</td>
+                                        <td>Michael Rodriguez</td>
+                                        <td>Sleep Support Tincture</td>
+                                        <td>$26.99</td>
+                                        <td><span class="badge badge-warning">Processing</span></td>
+                                        <td>May 14, 2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-2023-450</td>
+                                        <td>Emma Thompson</td>
+                                        <td>Daily Balance Capsules</td>
+                                        <td>$29.99</td>
+                                        <td><span class="badge badge-info">Shipped</span></td>
+                                        <td>May 13, 2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-2023-449</td>
+                                        <td>John Doe</td>
+                                        <td>Calming Tea Blend</td>
+                                        <td>$18.99</td>
+                                        <td><span class="badge badge-success">Completed</span></td>
+                                        <td>May 12, 2023</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-2023-448</td>
+                                        <td>Jennifer Smith</td>
+                                        <td>Vitality Essential Oil Blend</td>
+                                        <td>$22.99</td>
+                                        <td><span class="badge badge-danger">Cancelled</span></td>
+                                        <td>May 11, 2023</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Blog Posts -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Recent Blog Posts</h2>
+                        <a href="blog.html" class="btn btn-sm btn-primary">View All</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-container">
+                            <table class="admin-table">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Category</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>5 Adaptogenic Herbs to Combat Daily Stress</td>
+                                        <td>Admin User</td>
+                                        <td>Wellness</td>
+                                        <td>May 12, 2023</td>
+                                        <td><span class="badge badge-success">Published</span></td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <a href="blog-edit.html?id=1" class="btn btn-sm btn-secondary">Edit</a>
+                                                <button class="btn btn-sm btn-danger">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Immune-Boosting Herbal Tea Blends for Winter</td>
+                                        <td>Admin User</td>
+                                        <td>Recipes</td>
+                                        <td>April 28, 2023</td>
+                                        <td><span class="badge badge-success">Published</span></td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <a href="blog-edit.html?id=2" class="btn btn-sm btn-secondary">Edit</a>
+                                                <button class="btn btn-sm btn-danger">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Understanding Herbal Extraction Methods</td>
+                                        <td>Admin User</td>
+                                        <td>Education</td>
+                                        <td>April 15, 2023</td>
+                                        <td><span class="badge badge-success">Published</span></td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <a href="blog-edit.html?id=3" class="btn btn-sm btn-secondary">Edit</a>
+                                                <button class="btn btn-sm btn-danger">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Seasonal Herbs for Summer Wellness</td>
+                                        <td>Admin User</td>
+                                        <td>Wellness</td>
+                                        <td>April 5, 2023</td>
+                                        <td><span class="badge badge-warning">Draft</span></td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <a href="blog-edit.html?id=4" class="btn btn-sm btn-secondary">Edit</a>
+                                                <button class="btn btn-sm btn-danger">Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SEO Overview -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>SEO Performance</h2>
+                        <a href="seo.html" class="btn btn-sm btn-primary">View Detailed Report</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="seo-grid">
+                            <div class="seo-metric">
+                                <div class="metric-title">Page Views</div>
+                                <div class="metric-value">12,543</div>
+                                <div class="metric-change positive">+15.3%</div>
+                            </div>
+                            
+                            <div class="seo-metric">
+                                <div class="metric-title">Unique Visitors</div>
+                                <div class="metric-value">4,871</div>
+                                <div class="metric-change positive">+8.7%</div>
+                            </div>
+                            
+                            <div class="seo-metric">
+                                <div class="metric-title">Avg. Session Duration</div>
+                                <div class="metric-value">2m 45s</div>
+                                <div class="metric-change positive">+3.2%</div>
+                            </div>
+                            
+                            <div class="seo-metric">
+                                <div class="metric-title">Bounce Rate</div>
+                                <div class="metric-value">32.6%</div>
+                                <div class="metric-change negative">+2.1%</div>
+                            </div>
+                            
+                            <div class="seo-metric">
+                                <div class="metric-title">Top Keyword Position</div>
+                                <div class="metric-value">3.2</div>
+                                <div class="metric-change positive">+1.5</div>
+                            </div>
+                            
+                            <div class="seo-metric">
+                                <div class="metric-title">Organic Traffic</div>
+                                <div class="metric-value">2,856</div>
+                                <div class="metric-change positive">+12.8%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+    <script>
+        // Check authentication on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Verify authentication
+            if (window.adminAuth && !window.adminAuth.isAuthenticated()) {
+                window.location.href = 'index.html';
+                return;
+            }
+            
+            // Setup logout
+            const logoutLink = document.getElementById('logout-link');
+            if (logoutLink && window.adminAuth) {
+                logoutLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.adminAuth.logout();
+                });
+            }
+            
+            // Mobile sidebar toggle
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebar = document.querySelector('.sidebar');
+            
+            if (sidebarToggle && sidebar) {
+                sidebarToggle.addEventListener('click', function() {
+                    sidebar.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

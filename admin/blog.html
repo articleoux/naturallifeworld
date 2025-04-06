@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Management - Natural Life World</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/admin-styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="logo">
+                    <span class="logo-leaf"></span>
+                    <h1>Natural Life World</h1>
+                </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fas fa-tachometer-alt nav-icon"></i>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">
+                        <i class="fas fa-leaf nav-icon"></i>
+                        <span class="nav-text">Products</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link active">
+                        <i class="fas fa-book nav-icon"></i>
+                        <span class="nav-text">Blog</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                        <i class="fas fa-comment-dots nav-icon"></i>
+                        <span class="nav-text">Testimonials</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="orders.html" class="nav-link">
+                        <i class="fas fa-shopping-cart nav-icon"></i>
+                        <span class="nav-text">Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="seo.html" class="nav-link">
+                        <i class="fas fa-chart-line nav-icon"></i>
+                        <span class="nav-text">SEO Metrics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i class="fas fa-cog nav-icon"></i>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="logout-link">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span class="nav-text">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">Blog Management</h1>
+                <div class="actions-container">
+                    <a href="blog-new.html" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Add New Post
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Blog Post Filters -->
+            <div class="filter-container">
+                <div class="filter-group">
+                    <input type="text" placeholder="Search blog posts..." class="form-control">
+                </div>
+                <div class="filter-group">
+                    <select class="form-control">
+                        <option value="">All Categories</option>
+                        <option value="wellness">Wellness</option>
+                        <option value="recipes">Recipes</option>
+                        <option value="education">Education</option>
+                        <option value="lifestyle">Lifestyle</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select class="form-control">
+                        <option value="">All Status</option>
+                        <option value="published">Published</option>
+                        <option value="draft">Draft</option>
+                        <option value="scheduled">Scheduled</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-filter"></i> Apply Filters
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Blog Posts Table -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" id="select-all">
+                                    </th>
+                                    <th>Image</th>
+                                    <th>Title</th>
+                                    <th>Category</th>
+                                    <th>Author</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>SEO Score</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="post-select">
+                                    </td>
+                                    <td>
+                                        <img src="../images/blog-1.jpg" alt="Blog Post" class="thumbnail">
+                                    </td>
+                                    <td>5 Adaptogenic Herbs to Combat Daily Stress</td>
+                                    <td>Wellness</td>
+                                    <td>Admin User</td>
+                                    <td>May 12, 2023</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td>
+                                        <div class="seo-score good">92%</div>
+                                    </td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="blog-edit.html?id=1" class="btn btn-sm btn-secondary">Edit</a>
+                                            <a href="../blog/5-adaptogenic-herbs-to-combat-daily-stress.html" target="_blank" class="btn btn-sm btn-info">View</a>
+                                            <button class="btn btn-sm btn-danger">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="post-select">
+                                    </td>
+                                    <td>
+                                        <img src="../images/blog-2.jpg" alt="Blog Post" class="thumbnail">
+                                    </td>
+                                    <td>Immune-Boosting Herbal Tea Blends for Winter</td>
+                                    <td>Recipes</td>
+                                    <td>Admin User</td>
+                                    <td>April 28, 2023</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td>
+                                        <div class="seo-score average">78%</div>
+                                    </td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="blog-edit.html?id=2" class="btn btn-sm btn-secondary">Edit</a>
+                                            <a href="../blog/immune-boosting-herbal-tea-blends-for-winter.html" target="_blank" class="btn btn-sm btn-info">View</a>
+                                            <button class="btn btn-sm btn-danger">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="post-select">
+                                    </td>
+                                    <td>
+                                        <img src="../images/blog-3.jpg" alt="Blog Post" class="thumbnail">
+                                    </td>
+                                    <td>Understanding Herbal Extraction Methods</td>
+                                    <td>Education</td>
+                                    <td>Admin User</td>
+                                    <td>April 15, 2023</td>
+                                    <td><span class="badge badge-success">Published</span></td>
+                                    <td>
+                                        <div class="seo-score excellent">96%</div>
+                                    </td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="blog-edit.html?id=3" class="btn btn-sm btn-secondary">Edit</a>
+                                            <a href="../blog/understanding-herbal-extraction-methods.html" target="_blank" class="btn btn-sm btn-info">View</a>
+                                            <button class="btn btn-sm btn-danger">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="post-select">
+                                    </td>
+                                    <td>
+                                        <img src="../images/blog-4.jpg" alt="Blog Post" class="thumbnail">
+                                    </td>
+                                    <td>Seasonal Herbs for Summer Wellness</td>
+                                    <td>Wellness</td>
+                                    <td>Admin User</td>
+                                    <td>April 5, 2023</td>
+                                    <td><span class="badge badge-warning">Draft</span></td>
+                                    <td>
+                                        <div class="seo-score poor">45%</div>
+                                    </td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="blog-edit.html?id=4" class="btn btn-sm btn-secondary">Edit</a>
+                                            <a href="#" class="btn btn-sm btn-info disabled">View</a>
+                                            <button class="btn btn-sm btn-danger">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="post-select">
+                                    </td>
+                                    <td>
+                                        <img src="../images/blog-5.jpg" alt="Blog Post" class="thumbnail">
+                                    </td>
+                                    <td>The Benefits of Herbal Tinctures vs. Capsules</td>
+                                    <td>Education</td>
+                                    <td>Admin User</td>
+                                    <td>May 25, 2023</td>
+                                    <td><span class="badge badge-info">Scheduled</span></td>
+                                    <td>
+                                        <div class="seo-score good">85%</div>
+                                    </td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <a href="blog-edit.html?id=5" class="btn btn-sm btn-secondary">Edit</a>
+                                            <a href="#" class="btn btn-sm btn-info disabled">View</a>
+                                            <button class="btn btn-sm btn-danger">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="bulk-actions">
+                        <select class="form-control">
+                            <option value="">Bulk Actions</option>
+                            <option value="delete">Delete Selected</option>
+                            <option value="publish">Publish</option>
+                            <option value="draft">Move to Draft</option>
+                        </select>
+                        <button class="btn btn-secondary">Apply</button>
+                    </div>
+                    
+                    <ul class="pagination">
+                        <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+                        <li><a href="#" class="active">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- SEO Tips Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Blog SEO Tips</h2>
+                </div>
+                <div class="card-body">
+                    <div class="seo-tips-container">
+                        <div class="seo-tip">
+                            <div class="tip-icon">
+                                <i class="fas fa-heading"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3>Use Descriptive Titles</h3>
+                                <p>Include target keywords in your blog post titles. Keep titles under 60 characters for optimal display in search results.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="seo-tip">
+                            <div class="tip-icon">
+                                <i class="fas fa-paragraph"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3>Optimize Meta Descriptions</h3>
+                                <p>Write compelling meta descriptions between 150-160 characters that include keywords and encourage clicks.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="seo-tip">
+                            <div class="tip-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3>Use SEO-Friendly URLs</h3>
+                                <p>Create short, keyword-rich URLs with hyphens to separate words. Avoid dates, numbers, or special characters.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="seo-tip">
+                            <div class="tip-icon">
+                                <i class="fas fa-image"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3>Optimize Images</h3>
+                                <p>Add descriptive alt text to images and compress file sizes for faster loading. Use keyword-rich filenames.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="seo-tip">
+                            <div class="tip-icon">
+                                <i class="fas fa-list"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3>Structure Content with Headers</h3>
+                                <p>Use H2 and H3 headers to organize content in a hierarchy. Include keywords in headers where relevant.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="seo-tip">
+                            <div class="tip-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="tip-content">
+                                <h3>Focus on Long-Form Content</h3>
+                                <p>Articles with 1,500+ words tend to rank better. Aim for comprehensive, valuable content that answers user questions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select all checkbox
+            const selectAll = document.getElementById('select-all');
+            const postCheckboxes = document.querySelectorAll('.post-select');
+            
+            if (selectAll && postCheckboxes.length) {
+                selectAll.addEventListener('change', function() {
+                    postCheckboxes.forEach(checkbox => {
+                        checkbox.checked = this.checked;
+                    });
+                });
+                
+                // Update "select all" based on individual checkboxes
+                postCheckboxes.forEach(checkbox => {
+                    checkbox.addEventListener('change', function() {
+                        selectAll.checked = [...postCheckboxes].every(c => c.checked);
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

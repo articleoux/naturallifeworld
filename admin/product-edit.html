@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product - Natural Life World</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/admin-styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="logo">
+                    <span class="logo-leaf"></span>
+                    <h1>Natural Life World</h1>
+                </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fas fa-tachometer-alt nav-icon"></i>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link active">
+                        <i class="fas fa-leaf nav-icon"></i>
+                        <span class="nav-text">Products</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">
+                        <i class="fas fa-book nav-icon"></i>
+                        <span class="nav-text">Blog</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="testimonials.html" class="nav-link">
+                        <i class="fas fa-comment-dots nav-icon"></i>
+                        <span class="nav-text">Testimonials</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="orders.html" class="nav-link">
+                        <i class="fas fa-shopping-cart nav-icon"></i>
+                        <span class="nav-text">Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="seo.html" class="nav-link">
+                        <i class="fas fa-chart-line nav-icon"></i>
+                        <span class="nav-text">SEO Metrics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i class="fas fa-cog nav-icon"></i>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" id="logout-link">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span class="nav-text">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1 class="page-title">Edit Product</h1>
+                <div class="actions-container">
+                    <a href="products.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Back to Products
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Product Edit Form -->
+            <form class="admin-form" data-admin-form data-action="Product" data-redirect="products.html">
+                <div class="form-tabs">
+                    <button type="button" class="tab-btn active" data-tab="basic-info">Basic Info</button>
+                    <button type="button" class="tab-btn" data-tab="images">Images</button>
+                    <button type="button" class="tab-btn" data-tab="inventory">Inventory</button>
+                    <button type="button" class="tab-btn" data-tab="seo">SEO</button>
+                </div>
+                
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- Basic Info Tab -->
+                    <div class="tab-pane active" id="basic-info">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Basic Information</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="product-name">Product Name*</label>
+                                    <input type="text" id="product-name" name="name" class="form-control" value="Immune Support Tincture" required>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="product-category">Category*</label>
+                                            <select id="product-category" name="category" class="form-control" required>
+                                                <option value="tinctures" selected>Tinctures</option>
+                                                <option value="teas">Herbal Teas</option>
+                                                <option value="supplements">Supplements</option>
+                                                <option value="oils">Essential Oils</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="product-price">Price ($)*</label>
+                                            <input type="number" id="product-price" name="price" class="form-control" value="24.99" step="0.01" min="0" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="product-short-desc">Short Description*</label>
+                                    <textarea id="product-short-desc" name="short_description" class="form-control" rows="3" required>A powerful blend of echinacea, elderberry, and astragalus to strengthen your immune system.</textarea>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="product-description">Full Description*</label>
+                                    <textarea id="product-description" name="description" class="form-control" data-rich-editor rows="10" required>
+<h2>Immune Support Tincture</h2>
+
+<p>Our Immune Support Tincture is carefully crafted with a powerful blend of organic herbs known for their immune-strengthening properties. This potent formula combines the healing powers of echinacea, elderberry, and astragalus to provide year-round immune support.</p>
+
+<h3>Key Benefits:</h3>
+<ul>
+<li>Strengthens the immune system</li>
+<li>Helps the body fight off seasonal challenges</li>
+<li>Supports overall wellness</li>
+<li>Made with certified organic ingredients</li>
+</ul>
+
+<h3>Ingredients:</h3>
+<p>Organic Echinacea (Echinacea purpurea), Organic Elderberry (Sambucus nigra), Organic Astragalus (Astragalus membranaceus), Organic Glycerin, Filtered Water, Organic Alcohol.</p>
+
+<h3>Suggested Use:</h3>
+<p>Take 1-2 droppers full (approximately 30-60 drops) 2-3 times daily, or as directed by your healthcare practitioner. May be taken directly under the tongue or added to water or juice.</p>
+
+<h3>Size:</h3>
+<p>2 fl oz (60ml) amber glass bottle with dropper.</p>
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Images Tab -->
+                    <div class="tab-pane" id="images">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Product Images</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Main Product Image*</label>
+                                    <div class="image-preview" id="main-image-preview">
+                                        <img src="../images/product-1.png" alt="Product">
+                                    </div>
+                                    <div class="upload-btn-wrapper">
+                                        <button type="button" class="btn btn-secondary">
+                                            <i class="fas fa-upload"></i> Change Image
+                                        </button>
+                                        <input type="file" name="main_image" accept="image/*" data-preview="main-image-preview">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Additional Images</label>
+                                    <div class="additional-images">
+                                        <div class="image-item">
+                                            <div class="image-preview">
+                                                <img src="../images/product-1-alt.jpg" alt="Product">
+                                            </div>
+                                            <div class="image-actions">
+                                                <button type="button" class="btn btn-sm btn-danger">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="image-item">
+                                            <div class="image-preview">
+                                                <img src="../images/product-1-alt-2.jpg" alt="Product">
+                                            </div>
+                                            <div class="image-actions">
+                                                <button type="button" class="btn btn-sm btn-danger">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="image-item add-image">
+                                            <div class="image-preview">
+                                                <i class="fas fa-plus"></i>
+                                            </div>
+                                            <div class="upload-btn-wrapper">
+                                                <button type="button" class="btn btn-sm btn-secondary">Add Image</button>
+                                                <input type="file" name="additional_images[]" accept="image/*" multiple>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Inventory Tab -->
+                    <div class="tab-pane" id="inventory">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Inventory Management</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="product-sku">SKU*</label>
+                                            <input type="text" id="product-sku" name="sku" class="form-control" value="TIN-001" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="product-stock">Stock Quantity*</label>
+                                            <input type="number" id="product-stock" name="stock" class="form-control" value="42" min="0" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="product-status">Status*</label>
+                                            <select id="product-status" name="status" class="form-control" required>
+                                                <option value="in-stock" selected>In Stock</option>
+                                                <option value="out-of-stock">Out of Stock</option>
+                                                <option value="backorder">Backorder</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-col">
+                                        <div class="form-group">
+                                            <label for="product-low-stock">Low Stock Threshold</label>
+                                            <input type="number" id="product-low-stock" name="low_stock" class="form-control" value="5" min="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="track_inventory" checked>
+                                        Track inventory for this product
+                                    </label>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="allow_backorders">
+                                        Allow backorders when out of stock
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SEO Tab -->
+                    <div class="tab-pane" id="seo">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>SEO Settings</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="product-slug">Product URL Slug*</label>
+                                    <div class="input-group">
+                                        <span class="input-prefix">naturallifeworld.com/products/</span>
+                                        <input type="text" id="product-slug" name="slug" class="form-control" value="immune-support-tincture" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="meta-title">Meta Title*</label>
+                                    <input type="text" id="meta-title" name="meta_title" class="form-control" value="Immune Support Tincture | Natural Life World" required>
+                                    <div class="char-count">
+                                        <span id="meta-title-count">49</span>/60 characters
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="meta-description">Meta Description*</label>
+                                    <textarea id="meta-description" name="meta_description" class="form-control" rows="3" required>A powerful blend of organic echinacea, elderberry, and astragalus to naturally strengthen your immune system and promote overall wellness.</textarea>
+                                    <div class="char-count">
+                                        <span id="meta-desc-count">140</span>/160 characters
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="meta-keywords">Meta Keywords</label>
+                                    <input type="text" id="meta-keywords" name="meta_keywords" class="form-control" value="immune support, tincture, echinacea, elderberry, astragalus, herbal, natural immunity">
+                                    <small class="form-text text-muted">Separate keywords with commas. While less important for SEO now, some search engines still use them.</small>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" name="index_product" checked>
+                                        Allow search engines to index this product
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i> Save Changes
+                    </button>
+                    <a href="products.html" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </main>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab navigation
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Hide all tab panes
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Show the target tab pane
+                    const targetTab = this.getAttribute('data-tab');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+            
+            // Generate slug from product name
+            const productNameInput = document.getElementById('product-name');
+            const slugInput = document.getElementById('product-slug');
+            
+            if (productNameInput && slugInput) {
+                productNameInput.addEventListener('blur', function() {
+                    if (slugInput.value === '' || slugInput.getAttribute('data-auto-generated') === 'true') {
+                        slugInput.value = window.adminUtils.generateSlug(this.value);
+                        slugInput.setAttribute('data-auto-generated', 'true');
+                    }
+                });
+                
+                // Remove auto-generated attribute on manual edit
+                slugInput.addEventListener('input', function() {
+                    this.removeAttribute('data-auto-generated');
+                });
+            }
+            
+            // Character count for meta fields
+            const metaTitleInput = document.getElementById('meta-title');
+            const metaDescInput = document.getElementById('meta-description');
+            const metaTitleCount = document.getElementById('meta-title-count');
+            const metaDescCount = document.getElementById('meta-desc-count');
+            
+            function updateCharCount(input, display) {
+                if (input && display) {
+                    display.textContent = input.value.length;
+                    
+                    // Add warning class if exceeding recommended length
+                    if (input.id === 'meta-title' && input.value.length > 60) {
+                        display.classList.add('warning');
+                    } else if (input.id === 'meta-description' && input.value.length > 160) {
+                        display.classList.add('warning');
+                    } else {
+                        display.classList.remove('warning');
+                    }
+                }
+            }
+            
+            if (metaTitleInput && metaTitleCount) {
+                metaTitleInput.addEventListener('input', function() {
+                    updateCharCount(this, metaTitleCount);
+                });
+            }
+            
+            if (metaDescInput && metaDescCount) {
+                metaDescInput.addEventListener('input', function() {
+                    updateCharCount(this, metaDescCount);
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
